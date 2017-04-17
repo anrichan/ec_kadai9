@@ -1,0 +1,16 @@
+
+
+<h2>商品名</h2>
+<span><%= @post.productname %></span>
+<h2>画像</h2>
+<span><%= image_tag @post.photo.url(:medium) %></span>
+<h2>価格</h2>
+<span><%= @post.price %>円</span>
+<h2>商品内容</h2>
+<span><%= @post.description %></span>
+<h2>サイズ</h2>
+<span><%= @post.size %></span>
+<h2>色</h2>
+<span><%= @post.color %></span>
+
+

@@ -1,0 +1,32 @@
+<h1>welcome to Shop</h1>
+<% breadcrumb :posts %>
+
+<%= page_entries_info @post %>
+
+<table>
+  <thead>
+    <tr>
+      <th>商品名</th>
+      <th>価格</th>
+      <th>サイズ</th>
+      <th>色</th>
+      
+    </tr>
+  </thead>
+
+ <tbody>
+
+<% @post.each do |post| %>
+ <tr>
+    <td><%= post.productname %></td>
+    <td><%= post.price %></td>
+    <td><%= post.size %></td>
+    <td><%= post.color %></td>
+    <td><%= link_to '詳細を見る', post %></td>
+ </tr>
+
+<% end %>
+ </tbody>
+</table>
+
+<%= paginate @post,outer_window: 4  %>

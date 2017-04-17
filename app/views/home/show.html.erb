@@ -1,0 +1,22 @@
+<h1>Home#show</h1>
+
+<table>
+<% current_user.posts.each do |post| %>
+<tr>
+<td><%= link_to post.productname, post_path(post.id) %></td>
+
+<td><strong>¥</strong>
+<%= post.price %>
+</td>
+<td><%= post.size %></td>
+<td><%= post.color %></td>
+<td><%= link_to "edit", edit_post_path(post.id) %></td>
+<td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+</tr>
+<% end %>
+</table>
+
+<%= link_to "商品入力", new_post_path %>
+<%= link_to "出品HP", posts_path %>
+
+<p>Find me in app/views/home/show.html.erb</p>

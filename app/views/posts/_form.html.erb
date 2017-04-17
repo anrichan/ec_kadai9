@@ -1,0 +1,42 @@
+<%= form_for @post do |f| %>
+
+<div class="field">
+    <%= f.label :productname %><br>
+    <%= f.text_field :productname %>
+  </div>
+
+  <div class="field">
+    <%= f.label :price %><br>
+    <%= f.number_field :price %>
+  </div>
+
+  
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+
+  <div class="field">
+  <%= f.file_field :photo %>
+  </div>
+ 
+
+  <div class="field">
+  <%= f.label :size %><br>
+  <%= f.radio_button :size, "S"  %> <%= f.label :size_1, "S" %>
+  <%= f.radio_button :size, "M" %> <%= f.label :size_2, "M" %>
+  <%= f.radio_button :size, "L" %> <%= f.label :size_3, "L" %>
+  </div>
+
+  <div class="field">
+  <%= f.label :color %><br>
+  <%= f.radio_button :color, "白"  %> <%= f.label :color_1, "白" %>
+  <%= f.radio_button :color, "黒" %> <%= f.label :color_2, "黒" %>
+  <%= f.radio_button :color, "赤" %> <%= f.label :color_3, "赤" %>
+  </div>
+
+ 
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
